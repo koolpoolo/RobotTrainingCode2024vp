@@ -11,6 +11,7 @@ public class ExampleSetSpeedCommand extends Command {
     public ExampleSetSpeedCommand(ExampleSubsystem exampleSubsystem, double speed) {
         this.exampleSubsystem = exampleSubsystem;
         this.speed = speed;
+        addRequirements(exampleSubsystem);
     }
 
     @Override
