@@ -24,4 +24,17 @@ public class Controls {
     private void bindExampleControls() {
         driverController.a().onTrue(new ExampleSetSpeedCommand(s.exampleSubsystem, 0.1));
     }
+
+    private void AU() {
+        driverController.leftBumper().onTrue(s.exampleSubsystem.spa(0.6));
+    }
+
+    private void UR() {
+        driverController.rightBumper().onTrue(s.exampleSubsystem.spa(0.8));
+    }
+
+    private void lol() {
+        driverController.rightBumper().onTrue(s.exampleSubsystem.spa(0));
+
+    }
 }

@@ -45,4 +45,5 @@ public class ExampleSubsystem extends SubsystemBase {
     public Command spa(double speed) {
         return run(() -> setSpeed(speed));
     }
+
 }
