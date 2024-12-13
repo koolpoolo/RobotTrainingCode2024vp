@@ -1,20 +1,23 @@
 package frc.robot.subsystems;
 
+import com.ctre.phoenix6.hardware.TalonFX;
+
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Hardware;
 import frc.robot.dummy.Motor;
 
 public class ExampleSubsystem extends SubsystemBase {
     // Constants
     public static final double MAX_SPEED = 7;
     public static final double GEAR_RATIO = 10;
-
     // Member variables
-    private final Motor motor;
+    private final TalonFX motor;
 
     // Constructor
     public ExampleSubsystem() {
-        this.motor = new Motor(1);
+        this.motor = new TalonFX(Hardware.MOTOR_ID);
     }
 
     // Methods
@@ -37,5 +40,9 @@ public class ExampleSubsystem extends SubsystemBase {
     // Factories
     public Command setSpeedCmd(double speed) {
         return runOnce(() -> setSpeed(speed));
+    }
+
+    public Command spa(double speed) {
+        return run(() -> setSpeed(speed));
     }
 }

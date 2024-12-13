@@ -2,7 +2,6 @@ package frc.robot;
 
 public class Hardware {
 
-public final int MOTOR_ID = 1;
-
+    public final static int MOTOR_ID = 1;
 
 }
