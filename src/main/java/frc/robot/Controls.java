@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.commands.example.ExampleSetSpeedCommand;
 
 public class Controls {
-    public static final boolean EXAMPLE_ENABLED = false;
+    public static final boolean EXAMPLE_ENABLED = true;
     public static final int DRIVE_CONTROLLER_PORT = 0;
 
     private final CommandXboxController driverController;
@@ -34,7 +34,7 @@ public class Controls {
     }
 
     private void lol() {
-        driverController.rightBumper().onTrue(s.exampleSubsystem.spa(0));
+        driverController.rightBumper().onTrue(s.exampleSubsystem.stop());
 
     }
 }

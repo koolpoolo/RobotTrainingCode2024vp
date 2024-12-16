@@ -12,6 +12,7 @@ public class ExampleSubsystem extends SubsystemBase {
     // Constants
     public static final double MAX_SPEED = 7;
     public static final double GEAR_RATIO = 10;
+    public static final double STOP = 0;
     // Member variables
     private final TalonFX motor;
 
@@ -29,6 +30,10 @@ public class ExampleSubsystem extends SubsystemBase {
         motor.set(MAX_SPEED);
     }
 
+    public void wt() {
+        motor.set(STOP);
+    }
+
     public void fullReverse() {
         motor.set(-MAX_SPEED);
     }
@@ -44,6 +49,10 @@ public class ExampleSubsystem extends SubsystemBase {
 
     public Command spa(double speed) {
         return run(() -> setSpeed(speed));
+    }
+
+    public Command stop() {
+        return run(() -> wt());
     }
 
 }
