@@ -25,6 +25,7 @@ public class Controls {
         driverController.leftBumper().onTrue(s.exampleSubsystem.spa(0.6));
         driverController.rightBumper().onTrue(s.exampleSubsystem.spa(0.8));
         driverController.x().onTrue(s.exampleSubsystem.stop());
+
     }
 
 }
